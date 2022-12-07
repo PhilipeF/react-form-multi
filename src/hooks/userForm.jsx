@@ -14,8 +14,10 @@ export function userForm(steps) {
     return {
         currentStep,
         currentComponent: steps[currentStep],
-        changeStep
-    };
+        changeStep,
+        isLastStep: currentStep + 1 === steps.length ? true : false,
+        isFristStep: currentStep === 0 ? true : false
+    }
 }
 
 

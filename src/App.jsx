@@ -1,4 +1,5 @@
 import { GrFormPrevious, GrFormNext } from 'react-icons/gr';
+import { FiSend } from 'react-icons/fi';
 import UserForm from './components/UserForm';
 import Thanks from './components/Thanks';
 import ReviewForm from './components/ReviewForm';
@@ -11,7 +12,7 @@ function App() {
 
   const formComponents = [<UserForm />, <ReviewForm />, <Thanks />]
 
-  const { currentStep, currentComponent, changeStep } = userForm(formComponents)
+  const { currentStep, currentComponent, changeStep, isLastStep, isFristStep } = userForm(formComponents)
 
   return (
     <div className="app">
@@ -25,17 +26,29 @@ function App() {
         <p>etapas</p>
         <form onSubmit={(e) => changeStep(currentStep + 1, e)}>
           <div className="input-container">{currentComponent}</div>
-          <button type='button' onClick={() => changeStep(currentStep - 1)} >
-            <GrFormPrevious />
-            <span>Voltar</span>
-          </button>
-          <button type='submit'>
-            <span>Avançar</span>
-            <GrFormNext />
-          </button>
-        </form>
+          <div className="actions">
 
+            {!isFristStep && (<button type='button' onClick={() => changeStep(currentStep - 1)} >
+              <GrFormPrevious />
+              <span>Voltar</span>
+            </button>
+            )}
+
+            {!isLastStep ? (
+              <button type='submit'>
+                <span>Avançar</span>
+                <GrFormNext />
+              </button>
+            ) : (
+              <button type='button'>
+                <span>Enviar</span>
+                <FiSend />
+              </button>
+            )}
+          </div>
+        </form>
       </div>
+
     </div>
   )
 }
