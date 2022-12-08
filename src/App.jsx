@@ -7,6 +7,7 @@ import ReviewForm from './components/ReviewForm';
 import { userForm } from './hooks/userForm';
 
 import './index.css';
+import './App.css';
 
 function App() {
 
@@ -48,7 +49,6 @@ function App() {
           </div>
         </form>
       </div>
-
     </div>
   )
 }
