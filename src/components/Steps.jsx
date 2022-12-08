@@ -1,24 +1,26 @@
 import { AiOutlineUser, AiOutlineStar } from 'react-icons/ai';
 import { FiSend } from 'react-icons/fi';
 
-const Steps = () => {
+import './Steps.css';
+
+const Steps = ({ currentStep }) => {
   return (
     <div className="steps">
-      <div className="step">
+      <div className="step active">
         <p>
-          {AiOutlineUser}
+          <AiOutlineUser />
           Identificação
         </p>
       </div>
-      <div className="step">
+      <div className={`step ${currentStep >= 1 ? "active" : ""}`}>
         <p>
-          {AiOutlineStar}
-          Avalição
+          <AiOutlineStar />
+          Avaliação
         </p>
       </div>
-      <div className="step">
+      <div className={`step ${currentStep >= 2 ? "active" : ""}`}>
         <p>
-          {FiSend}
+          <FiSend />
           Envio
         </p>
       </div>
@@ -27,5 +29,3 @@ const Steps = () => {
 }
 
 export default Steps;
-
-//parei no minuto 41
