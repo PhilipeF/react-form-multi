@@ -5,10 +5,12 @@ import {
     BsFillEmojiHeartEyesFill
 } from 'react-icons/bs';
 
+import './ReviewForm.css';
+
 const ReviewForm = () => {
     return (
         <div className="form-review">
-            <div className="form-contrrol score-container">
+            <div className="form-control score-container">
                 <label className="radio-container">
                     <input type="radio" value="unsatified" name="review" required />
                     <BsFillEmojiFrownFill />
@@ -30,8 +32,13 @@ const ReviewForm = () => {
                     <p>Muito Satisfeito</p>
                 </label>
             </div>
+            <textarea
+                name="comment"
+                id="comment"
+                placeholder="Conte como foi a sua experiência com o produto"
+            ></textarea>
         </div>
-    )
-}
+    );
+};
 
 export default ReviewForm

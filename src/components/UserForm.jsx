@@ -11,7 +11,6 @@ const UserForm = () => {
                     required
                 />
                 <div className="form-control">
-
                     <label htmlFor="email">E-mail:</label>
                     <input
                         type="email"
@@ -20,7 +19,6 @@ const UserForm = () => {
                         placeholder="Digite o seu e-mail"
                     />
                 </div>
-                <textarea />
             </div>
         </div>
     )
