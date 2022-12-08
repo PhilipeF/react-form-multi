@@ -12,6 +12,10 @@
   margin-bottom: 1rem;
 }
 
+.header p {
+  margin-bottom: 2rem;
+}
+
 .form-container {
   max-width: 600px;
   margin: 0 auto;

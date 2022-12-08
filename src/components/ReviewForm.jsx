@@ -1,10 +1,7 @@
 const ReviewForm = () => {
     return (
         <div className="form-review">
-            <span>Insatisfeito</span>
-            <span>Poderia ser melhor</span>
-            <span>Satisfeito</span>
-            <span>Muito Satisfeto</span>
+            <h2>ReviewForm</h2>
         </div>
     )
 }
