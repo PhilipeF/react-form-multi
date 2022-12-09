@@ -17,7 +17,11 @@ const formTamplete = {
   email: "",
   review: "",
   comment: ""
-}
+};
+
+// const enviarAlert = () => {
+//   alert('Dados enviado com sucesso');
+// };
 
 function App() {
 
@@ -28,6 +32,7 @@ function App() {
       return { ...prev, [key]: value };
     });
   };
+
 
   const formComponents = [
     <UserForm data={data} updateFielHandler={updateFielHandler} />,
@@ -64,8 +69,9 @@ function App() {
                 <GrFormNext />
               </button>
             ) : (
-              <button type='button'>
+              <button type='button' onClick={() => alert('Obrigado!')}>
                 <span>Enviar</span>
+
                 <FiSend />
               </button>
             )}
