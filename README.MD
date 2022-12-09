@@ -9,7 +9,7 @@
 
 Projeto desenvolvido com intuito de treinar minhas habiliades em html, css, javascript e react seguindo orientação do professor [Matheus Battisti](https://www.linkedin.com/in/matheusbattisti/).
 
-Foi criado um formulário em react utilizando requisições padrões onde é possível o cliente registar o seu nome, e-mail, análise de satisfação com emoji e um comentário. Essas informação são exibidas em tela no final do cilco, conforme vemos em muitos sites de e-commerce.
+Foi criado um formulário em react utilizando validações padrões onde é possível o cliente registar o seu nome, e-mail, análise de satisfação com emoji e um comentário. Essas informação são exibidas em tela no final do cilco, conforme vemos em muitos sites de e-commerce.
 <br>
 <br>
 
