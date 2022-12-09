@@ -26,3 +26,8 @@
 .review-data span {
   font-weight: bold;
 }
+
+.review-data span:nth-child(2) {
+  margin-left: 5px;
+  font-weight: normal;
+}

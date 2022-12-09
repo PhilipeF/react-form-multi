@@ -29,7 +29,7 @@ const Thanks = ({ data }) => {
             </p>
             <p className="review-data">
                 <span>Comentário:</span>
-                {data.comment}
+                <span>{data.comment}</span>
             </p>
         </div>
     )
