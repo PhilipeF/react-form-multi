@@ -5,14 +5,25 @@ import Thanks from './components/Thanks';
 import Steps from './components/Steps';
 import ReviewForm from './components/ReviewForm';
 
+import { useState } from 'react';
+
 import { userForm } from './hooks/userForm';
 
 import './index.css';
 import './App.css';
 
+const formTamplete = {
+  name: "",
+  email: "",
+  review: "",
+  commet: ""
+}
+
 function App() {
 
-  const formComponents = [<UserForm />, <ReviewForm />, <Thanks />]
+  const [data, setData] = useState(formTamplete);
+
+  const formComponents = [<UserForm data={data} />, <ReviewForm data={data} />, <Thanks data={data} />]
 
   const { currentStep, currentComponent, changeStep, isLastStep, isFristStep } = userForm(formComponents)
 
@@ -26,7 +37,7 @@ function App() {
       </div>
       <div className="form-container">
         <Steps currentStep={currentStep} />
-        <p>etapas</p>
+        {/* <p>etapas</p> */}
         <form onSubmit={(e) => changeStep(currentStep + 1, e)}>
           <div className="input-container">{currentComponent}</div>
           <div className="actions">
