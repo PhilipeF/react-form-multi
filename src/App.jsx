@@ -16,14 +16,24 @@ const formTamplete = {
   name: "",
   email: "",
   review: "",
-  commet: ""
+  comment: ""
 }
 
 function App() {
 
   const [data, setData] = useState(formTamplete);
 
-  const formComponents = [<UserForm data={data} />, <ReviewForm data={data} />, <Thanks data={data} />]
+  const updateFielHandler = (key, value) => {
+    setData((prev) => {
+      return { ...prev, [key]: value };
+    });
+  };
+
+  const formComponents = [
+    <UserForm data={data} updateFielHandler={updateFielHandler} />,
+    <ReviewForm data={data} updateFielHandler={updateFielHandler} />,
+    <Thanks data={data} />
+  ];
 
   const { currentStep, currentComponent, changeStep, isLastStep, isFristStep } = userForm(formComponents)
 
