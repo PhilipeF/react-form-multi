@@ -57,6 +57,9 @@ npm run dev
 
 <h2>Segue a baixo um video do projeto:</h2>
 
+https://user-images.githubusercontent.com/64853039/206791609-9494a31b-c3b5-4573-8e21-ba1970109442.mp4
+
+
 ## 📲 Contato
 
 Entre em contato comigo por e-mail ou pelo meu LinkedIn:
