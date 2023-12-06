@@ -1,6 +1,3 @@
-/* .active {
-  background-color: #92a8d1;
-} */
 .steps {
   display: flex;
   gap: 4rem;
@@ -25,7 +22,7 @@
   background-color: #fff;
   z-index: 1;
   width: 120px;
-  paddign: 0.5rem;
+  padding: 0.5rem;
 }
 
 .step svg {
@@ -39,4 +36,13 @@
 
 .active svg {
   fill: #7076f4;
+}
+
+@media(max-width: 768px) {
+  .steps {
+    gap: 2rem;
+  }
+  .steps::after {
+    display: none;
+  }
 }
